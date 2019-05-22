@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="138.0" layoutY="14.0" text="Einstellungen">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="95.0" prefHeight="304.0" prefWidth="586.0">
+         <children>
+            <Label text="Label" />
+            <HBox prefHeight="100.0" prefWidth="566.0" />
+            <Label text="Label" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Label text="Label" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox alignment="TOP_RIGHT" prefHeight="43.0" prefWidth="586.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Zurück" />
+                  <Button mnemonicParsing="false" text="Spiel Sarten" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
