@@ -3,5 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class GameVariables {
-	ArrayList<Card> cards = new ArrayList<>();
-}
+	
+	public static ArrayList<Card> cards = new ArrayList<>();
+	
+}	

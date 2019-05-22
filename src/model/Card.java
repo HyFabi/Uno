@@ -8,7 +8,7 @@ public class Card {
 	private int number;
 	
 	
-	// 11 = +2; 12 = Auslassen; 13 = Richtungswechsel; 14 =+4; 15 = Farbe aussuchen
+	// 10 = +2; 11 = Auslassen; 12 = Richtungswechsel; 13 =+4; 14 = Farbe aussuchen
 
 	public Card(Colors c, int n) {
 		setColor(c);
@@ -31,7 +31,7 @@ public class Card {
 	}
 	
 	public void setNumber(int number) {
-		if(number > 0 && number < 16){
+		if(number >= 0 && number < 15){
 			this.number = number;
 		}
 	}
