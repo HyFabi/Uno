@@ -10,11 +10,14 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	
 	public static final boolean debugMode = true;
+	public static Parent root;
+	
+	Stage primaryStage;
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("startMenu.fxml"));
+			root = FXMLLoader.load(getClass().getResource("startMenu.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
