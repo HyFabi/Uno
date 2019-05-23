@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class GameVariables {
 	
 	private int players;
-	public static ArrayList<Card> cardStack = new ArrayList<>();
+	public static ArrayList<Card> cardStack = new ArrayList<Card>();
 	public static ArrayList<ArrayList<Card>> npcs = new ArrayList<>();
 	
 	public GameVariables(int players) {
@@ -21,4 +21,4 @@ public class GameVariables {
 	public int getPlayers() {
 		return players;
 	}
-}	
+}
