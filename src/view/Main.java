@@ -12,19 +12,26 @@ public class Main extends Application {
 	public static final boolean debugMode = true;
 	public static Parent root;
 	
-	Stage primaryStage;
+	static Stage primaryStage = new Stage();
+	static Scene scene;
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			root = FXMLLoader.load(getClass().getResource("startMenu.fxml"));
-			Scene scene = new Scene(root);
+			scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			Main.primaryStage.setScene(scene);
+			Main.primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void loadScene(Parent p) {
+		scene = null;
+		scene = new Scene(p);
+		Main.primaryStage.setScene(scene);
 	}
 	
 	public static void main(String[] args) {

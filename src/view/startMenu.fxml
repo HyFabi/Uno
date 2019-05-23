@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerStart">
    <children>
       <Label layoutX="232.0" layoutY="14.0" text="UNO!">
@@ -16,17 +15,17 @@
       </Label>
       <VBox layoutX="14.0" layoutY="95.0" prefHeight="308.0" prefWidth="585.0">
          <children>
-            <Button mnemonicParsing="false" text="Spiel Starten">
+            <Button mnemonicParsing="false" onAction="#startGameBtn" text="Spiel Starten">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Einstellungen">
+            <Button mnemonicParsing="false" onAction="#gameSettingsBtn" text="Einstellungen">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="Spiel Beenden">
+            <Button mnemonicParsing="false" onAction="#closeGameBtn" text="Spiel Beenden">
                <font>
                   <Font size="20.0" />
                </font>
