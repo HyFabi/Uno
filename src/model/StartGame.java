@@ -40,8 +40,11 @@ public class StartGame {
 		for(Card c : GameVariables.cardStack) {
 			System.out.println(c.toString());
 		}
-//		Main.loadScene(FXMLLoader.load(Main.class.getResource("game.fxml"))); 
-//TODO mix()
+		try {
+			Main.loadScene(FXMLLoader.load(Main.class.getResource("game.fxml")));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
 	}
 	
 	private static void mix() {
