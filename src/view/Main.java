@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 
 public class Main extends Application {
 	
-	public static final boolean debugMode = true;
+	public static final boolean debugMode = false;
 	public static Parent root;
 	
 	static Stage primaryStage = new Stage();

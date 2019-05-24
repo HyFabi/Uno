@@ -1,7 +1,6 @@
 package model;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Random;
 
 import javafx.fxml.FXMLLoader;
@@ -19,7 +18,7 @@ public class StartGame {
 	}
 	
 	
-	public static void startGame() throws IOException {
+	public static void startGame() {
 		createStack();
 		if(Main.debugMode) {
 			System.out.println("Cards before: " + GameVariables.cardStack.size());
@@ -37,28 +36,41 @@ public class StartGame {
 				
 			}
 		}
+		System.out.println("Mixed Cards:");
+		for(Card c : GameVariables.cardStack) {
+			System.out.println(c.toString());
+		}
 //		Main.loadScene(FXMLLoader.load(Main.class.getResource("game.fxml"))); 
 //TODO mix()
 	}
 	
 	private static void mix() {
-		Card[] a = new Card[GameVariables.cardStack.size()-1];
+		Card[] a = new Card[GameVariables.cardStack.size()];
 		
 		for(Card c : GameVariables.cardStack) {
 			if(Main.debugMode) {
 				System.out.println("Mixing: for");
 			}
+			if(c == null) {
+				System.out.println("break");
+				break;
+			}
 			Random r = new Random();
 			int i = r.nextInt(GameVariables.cardStack.size())+1;
 			while(true) {
+				
 				if(Main.debugMode) {
-//					System.out.println("while" + i);
+					System.out.println("while" + i);
+					System.out.println("Want to mixed: " + c.toString());
 				}
 				if(i >= GameVariables.cardStack.size()) {
 					i = 0;
 				}
 				if(a[i] == null) {
 					a[i] = c;
+					if(Main.debugMode) {
+						System.out.println("Card mixed" + c.toString());
+					}
 					break;
 				}else {
 					i++;
@@ -67,9 +79,8 @@ public class StartGame {
 			
 		}
 		GameVariables.cardStack.clear();
-		for(Card c : a) {
-			GameVariables.cardStack.add(c);
-			System.out.println(c.toString());
+		for(int i = 0; i < a.length; i++) {
+			GameVariables.cardStack.add(a[i]);
 		}
 	}
 	
